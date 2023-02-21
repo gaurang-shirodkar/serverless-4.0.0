@@ -48,5 +48,6 @@ resource "aws_s3_bucket_public_access_block" "flowlog" {
   depends_on = [
     aws_s3_bucket_policy.flowlog,
     aws_s3_bucket_ownership_controls.flowlog
+ 
   ]
 }
