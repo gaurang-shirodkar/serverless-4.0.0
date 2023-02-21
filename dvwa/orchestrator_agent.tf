@@ -1,7 +1,7 @@
 # https://registry.terraform.io/modules/sysdiglabs/fargate-orchestrator-agent/aws/latest
 module "fargate-orchestrator-agent" {
   source  = "sysdiglabs/fargate-orchestrator-agent/aws"
-  version = "0.2.0"
+  version = "0.1.1"
 
   vpc_id  = module.vpc.vpc_id
   subnets = module.vpc.private_subnets
@@ -13,5 +13,5 @@ module "fargate-orchestrator-agent" {
   name        = "${var.prefix}-orchestrator"               # Identifier for module resources
   agent_image = "quay.io/sysdig/orchestrator-agent:latest" # Orchestrator agent image
 
-  assign_public_ip = false # Provisions a public IP for the service. Required when using an Internet Gateway for egress.
+  assign_public_ip = true # Provisions a public IP for the service. Required when using an Internet Gateway for egress.
 }

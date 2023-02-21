@@ -16,7 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-northeast-1"
+  region = "us-east-2"
 }
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region
@@ -25,6 +25,6 @@ data "aws_region" "current" {}
 data "aws_caller_identity" "self" {}
 
 provider "sysdig" {
-  sysdig_secure_url       = "https://app.au1.sysdig.com"
-  sysdig_secure_api_token = var.sysdig_access_key
+  sysdig_secure_url       = "https://us2.app.sysdig.com"
+  sysdig_secure_api_token = var.secure_api_token
 }
