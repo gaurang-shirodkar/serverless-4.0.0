@@ -16,4 +16,5 @@ module "vpc" {
   flow_log_destination_type = "s3"
   flow_log_destination_arn  = aws_s3_bucket.flowlog.arn
   flow_log_traffic_type     = "ALL"
+  
 }

@@ -1,4 +1,5 @@
 [
+
   {
       "name": "event-generator",
       "essential": true,
@@ -17,5 +18,6 @@
           "awslogs-stream-prefix": "${log_stream_prefix}"
         }
       }
-  }
+ 
+    }
 ]
